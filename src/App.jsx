@@ -1,13 +1,19 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react'
+import Players from './features/Players';
+import SinglePlayer from './features/SinglePlayer';
+import { Routes, Route, Link } from "react-router-dom";
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+    <div className="container">
+      <Routes>
+      <Route path="/" element={<Players/>}/>
+      <Route path="/:viewInfo" element={<SinglePlayer/>}/>
+      </Routes>
+    </div>
     </>
-  )
+  );
 }
-
 export default App

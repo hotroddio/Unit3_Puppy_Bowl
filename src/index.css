@@ -1,68 +1,102 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/* Apply a background image to the entire body of the document. */
 body {
-  margin: 0;
+  background-image: url("./concrete.jpg"); /* The image used as a background. */
+  background-repeat: no-repeat; /* The background image will not repeat. */
+  background-attachment: fixed; /* The background image will not scroll with the page. */
+  background-size: cover; /* The background image will cover the entire area of the element. */
+}
+
+/* Styling for the introduction text of the application. */
+.intro {
+  text-align: center; /* The text is centered. */
+  color: #610564; /* The color of the text. */
+  font-size: 24px; /* The size of the text. */
+  padding: 24px; /* The padding around the text. */
+  margin-left: 21px; /* The margin to the left of the text. */
+  padding-right: 100px; /* The padding to the right of the text. */
+  padding-left: 100px; /* The padding to the left of the text. */
+}
+
+/* Styling for the container that holds the player cards. */
+.players {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-wrap: wrap;
+  align-content: center;
+   /* The player cards are displayed using flexbox. */
+ /* The player cards will wrap onto the next line if there is not enough space. */
+ /* The player cards are centered on the line. */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
+/* Styling for individual player cards. */
+.player-card {
+  width: 360px; /* The width of the card. */
+  height: 420px; /* The height of the card. */
+  margin: 10px; /* The margin around the card. */
+   /* The background color of the card. */
+  background-color: rgb(89, 89, 241);
+/* The border around the card. */
+  border: solid;
+ /* The radius of the card's corners. */
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+   /* The shadow effect around the card. */
+  box-shadow: 5px 5px;
+  overflow: hidden; /* Any content that goes outside the card will be hidden. */
+  position: relative; /* The card's position is set to relative so it can be moved using the transform property. */
+  transition: transform 0.3s; /* Transition effect for the transform property. */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Styling for when a user hovers over a player card. */
+.player-card:hover {
+  /* The card moves up 5 pixels when hovered over. */
+  transform: translateY(-5px);
+}
+
+/* Styling for the container that holds the player's image. */
+.player-image-container {
+  display: inline-block;
+ /* The image is centered. */
+ /* The image is centered along the horizontal axis. */
+  /* The image is centered along the vertical axis. */
+  height: 300px; /* The height of the image container. */
+  padding: 10px; /* The padding around the image. */
+}
+
+/* Styling for the player's image. */
+.player-image {
+  width: 250px; /* The width of the image. */
+  height: 250px; /* The height of the image. */
+  object-fit: cover;
+  display: block;
+  margin: auto;
+  /* The image will cover the entire area of its container without distorting its aspect ratio. */
+  /* The image is displayed using CSS Grid. */
+ /* The margin to the left of the image. */
+}
+
+/* Styling for the player's details (name, breed, status). */
+.player-details {
+  flex-direction: column; /* The details are arranged in a column. */
+  align-items: center; /* The details are centered along the vertical axis. */
+  justify-content: center; /* The details are centered along the horizontal axis. */
+  color: whitesmoke; /* The color of the details text. */
+  font-size: 16px; /* The size of the details text. */
+  text-align: center; /* The details text is centered. */
+}
+
+.page-title {
+  text-align: center;
+}
+
+.page-paragraph {
+  text-align: center;
+  text-decoration: underline;
+  color: purple;
+  padding: 10px 10px 10px 10px;
+}
+
+.page-paragraph2 {
+  text-align: center;
+  text-decoration: underline;
+  color: purple;
+  padding: 10px 10px 10px 10px;
 }
