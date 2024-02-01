@@ -10,7 +10,7 @@ function App() {
     <div className="container">
       <Routes>
       <Route path="/" element={<Players/>}/>
-      <Route path="/:viewInfo" element={<SinglePlayer/>}/>
+      <Route path="/:playerinfo" element={<SinglePlayer/>}/>
       </Routes>
     </div>
     </>

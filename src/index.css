@@ -30,7 +30,7 @@ body {
 /* Styling for individual player cards. */
 .player-card {
   width: 360px; /* The width of the card. */
-  height: 420px; /* The height of the card. */
+  height: 450px; /* The height of the card. */
   margin: 10px; /* The margin around the card. */
    /* The background color of the card. */
   background-color: rgb(89, 89, 241);
@@ -57,7 +57,7 @@ body {
  /* The image is centered. */
  /* The image is centered along the horizontal axis. */
   /* The image is centered along the vertical axis. */
-  height: 300px; /* The height of the image container. */
+  height: 390px; /* The height of the image container. */
   padding: 10px; /* The padding around the image. */
 }
 
@@ -99,4 +99,30 @@ body {
   text-decoration: underline;
   color: purple;
   padding: 10px 10px 10px 10px;
+}
+
+/* Styling for individual player cards. */
+.single-player-card {
+  width: 360px; /* The width of the card. */
+  height: 450px; /* The height of the card. */
+  margin: auto; /* The margin around the card. */
+   /* The background color of the card. */
+  padding: 70px;
+  background-color: rgb(89, 89, 241);
+/* The border around the card. */
+  border: solid;
+ /* The radius of the card's corners. */
+  border-radius: 8px;
+   /* The shadow effect around the card. */
+  box-shadow: 5px 5px;
+  overflow: hidden; /* Any content that goes outside the card will be hidden. */
+  position: relative; /* The card's position is set to relative so it can be moved using the transform property. */
+  transition: transform 0.3s; /* Transition effect for the transform property. */
+}
+
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 10px auto;
 }

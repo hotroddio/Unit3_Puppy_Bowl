@@ -30,7 +30,7 @@ export const puppyBowlApi = createApi({
     singlePlayer: builder.query({
       query: (id) => ({
         url: `players/${id}`,
-        method: "Get",
+        method: "GET",
       }),
       invalidatesTags: ["Player"],
     }),
